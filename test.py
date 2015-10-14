@@ -81,6 +81,7 @@ Exiting...
         ','.join(packages),
 
         'common.cmo' if week_has_common else '',
+        'bench.cmo',
         ex_tester + '.cmo',
         ex_full_name + '.mli',
         ex_full_name + '.ml',
