@@ -10,7 +10,7 @@ exercise_numbers = {
 
 if __name__ == '__main__':
 
-	assert "exercise-1" in exercise_numbers, "Unknown exercise name."
-	testid = exercise_numbers["exercise-1"]
+	assert "exercise-2" in exercise_numbers, "Unknown exercise name."
+	testid = exercise_numbers["exercise-2"]
 
 	test.test('46042', '0', testid)
