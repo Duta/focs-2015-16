@@ -118,7 +118,7 @@ You will also need to upgrade your environment, as indicated by OPAM:
 
 Once you've done all this the first time, in subsequent sessions you can simply type:
 
-  ./prepare_env.csh
+	./prepare_env.csh
 
 To get your terminal up and running again.
 
