@@ -147,7 +147,7 @@ Testing and Submitting Assignments:
 To test your assignments, you need to be in the `week-n` folder (e.g. `week-2`)
 in a terminal session, and run the testing script for the exercise you're working on.
 
-As an example, this is how you'd test week 2's 1st exercise:
+As an example, this is how you'd test week 3's 1st exercise:
 
     cd path/to/your/work/folder/focs-2015-16/week-3
     python test_ex1.py
@@ -163,8 +163,8 @@ If you do, you'll get a mark of 0.**
 
 The list of current testing scripts is:
 
-    focs/week-3/test_ex1.py
-    focs/week-3/test_ex2.py
-    focs/week-3/test_ex3.py
+    focs-2015-16/week-3/test_ex1.py
+    focs-2015-16/week-3/test_ex2.py
+    focs-2015-16/week-3/test_ex3.py
 
 If everything works out correctly you should see no further output. If there are any errors please contact us immediately!
