@@ -1,1 +1,0 @@
-val zero : unit -> int;;
