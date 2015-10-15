@@ -27,6 +27,10 @@ focs-2015-16
 Getting Set Up:
 ---------------
 
+**This section is only relevant if you are setting up your home machine. You only need to do this once!**
+
+### Git
+
 The first thing you'll need is [git](http://git-scm.com/downloads).
 
 You may well have this installed already. To check, open a terminal and type:
@@ -35,9 +39,50 @@ You may well have this installed already. To check, open a terminal and type:
 
 If you get a message about 'git' not being found, then you'll need to [install it](http://git-scm.com/downloads).
 
+### `Requests` Python module
+
+Python is a requirement for the marking script to function.
+On the computer you wish to use to upload your assignments you need to have OCaml installed, Python installed and the requests module installed for Python.
+
+The lab machines already contain a copy of Python. To install 'requests' for the marking script to use, please run the following commands on the terminal.
+You can do the same on the virtual machine image.
+
+	git clone git://github.com/kennethreitz/requests.git
+	cd requests
+	python setup.py install --user
+
+You can then safely delete the `requests` folder.
+
+### `Quickcheck` OCaml module
+
+If you haven't done it already, you need to initialise your OPAM repository and upgrade it and install the missing dependencies. 
+
+	opam init
+	opam upgrade
+	opam install quickcheck
+
+You will also need to upgrade your environment, as indicated by OPAM:
+
+	eval `opam config env`
+
+Once you've done all this the first time, in subsequent sessions you can simply type:
+
+	./prepare_env.csh
+
+To get your terminal up and running again.
+
+
+Getting the assignment files
+----------------------------
+
 Start a terminal session, and do the following steps:
 
- - First, navigate to the folder in which you store your work files:
+The default installation of OCaml is too old. To access the new installation you need to type these commands every time you use the lab machines:
+
+	module load OCaml
+	module load OPAM
+
+ Then, navigate to the folder in which you store your work files:
 
    `cd path/to/your/work/folder`
 
@@ -67,10 +112,9 @@ let sort5 = failwith "To do: Implement sort5";;
 
 This is a starting point for you to complete the exercise.
 
-Downloading New Assignments:
-----------------------------
+###Downloading New Assignments###
 
-Very occasionally (okay, every week) you'll be set new assignments.
+Every week you'll be set new assignments.
 
 To download them, make sure you're in the `focs` folder, and type:
 
@@ -80,50 +124,11 @@ This will download any new assignments, making sure you're up to date.
 
 You may also need to do this from time to time if we add or change test scripts.
 
-Installing Prerequisites:
-------------------------
 
-### `Requests` Python module
+Testing and Submitting Assignments:
+-----------------------------------
 
-Python is a requirement for the marking script to function.
-On the computer you wish to use to upload your assignments you need to have OCaml installed, Python installed and the requests module installed for Python.
-
-The lab machines already contain a copy of Python. To install 'requests' for the marking script to use, please run the following commands on the terminal.
-You can do the same on the virtual machine image.
-
-	git clone git://github.com/kennethreitz/requests.git
-	cd requests
-	python setup.py install --user
-
-You can then safely delete the `requests` folder.
-
-### Dependencies for the UG04/LG04 computer labs
-
-The default installation of OCaml is too old. To access the new installation you need to type these commands every time you use the lab machines:
-
-	module load OCaml
-	module load OPAM
-
-Note that `ocaml` will still run even if you forget to do this but you will get strange errors!
-
-Next you need to initialise your OPAM repository and upgrade it and install the missing dependencies. **You only need to do this once!**
-
-	opam init
-	opam upgrade
-	opam install quickcheck
-
-You will also need to upgrade your environment, as indicated by OPAM:
-
-	eval `opam config env`
-
-Once you've done all this the first time, in subsequent sessions you can simply type:
-
-	./prepare_env.csh
-
-To get your terminal up and running again.
-
-Getting a Canvas Access Token:
-------------------------------
+###Getting a Canvas Access Token###
 
 In order for the marking script to upload your submission, you need to have an authentication token. This token will provide access to your canvas account, and should be treated as a password. Never share your access token with someone else, and it’s suggested that you only make this token available for a day, and generate a new one every time you submit an assignment.
 
@@ -141,8 +146,7 @@ In order for the marking script to upload your submission, you need to have an a
 
  - You will be faced with a page that has your full token. Take a note of it as you’ll need it when running the testing script.
 
-Testing and Submitting Assignments:
------------------------------------
+###Testing and submitting###
 
 To test your assignments, you need to be in the `week-n` folder (e.g. `week-2`)
 in a terminal session, and run the testing script for the exercise you're working on.
