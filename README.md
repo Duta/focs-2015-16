@@ -27,7 +27,7 @@ focs-2015-16
 Getting Set Up:
 ---------------
 
-**This section is only relevant if you are setting up your home machine. You only need to do this once!**
+**This section is only relevant if you are setting up your home machine. You only need to do this once! If you are submitting from a UG lab machine skip to the next section.**
 
 ### Git
 
