@@ -166,6 +166,13 @@ hash value used for detecting plagiarism) to canvas. See the instructions above 
 how to get the token. Once it is displayed in a Canvas window copy-and-paste it into
 the terminal window then hit return.
 
+**Note:** The test script has been compiled with OCaml version 4.01.0. If you are using 
+a different version of OCaml you may get this error:
+```
+Error: The file ex1_run.cmo is not a bytecode object file
+```
+You will need to use the same version of the compiler as in the lab (or as close as possible). 
+
 **Please don't try and upload your assignments to canvas manually!
 If you do, you'll get a mark of 0.**
 
