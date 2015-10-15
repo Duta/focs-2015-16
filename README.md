@@ -173,6 +173,13 @@ Error: The file ex1_run.cmo is not a bytecode object file
 ```
 You will need to use the same version of the compiler as in the lab (or as close as possible). 
 
+Downgrading the OCaml installation to 4.01.0 is very easy with OPAM:
+```
+opam switch 4.01.0
+eval `opam config env`
+```
+Done!
+
 **Please don't try and upload your assignments to canvas manually!
 If you do, you'll get a mark of 0.**
 
