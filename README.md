@@ -64,12 +64,11 @@ If you haven't done it already, you need to initialise your OPAM repository and 
 You will also need to upgrade your environment, as indicated by OPAM:
 
 	eval `opam config env`
+	
+### Haskell modules ###
 
-Once you've done all this the first time, in subsequent sessions you can simply type:
-
-	./prepare_env.csh
-
-To get your terminal up and running again.
+Haskell is another dependency, in particular the packages `runhaskell` and `parsec`. They can be installed
+using `cabal` which comes with the Haskell platform. 
 
 
 Getting the assignment files
