@@ -98,25 +98,29 @@ Inside `focs-2015-16` will be files in the structure shown in the above image.
 
 Let's get the week 3's 1st exercise:
 
-    cd week-3/exercise-1
+    cd week-0/exercise-1
 
     ocaml gen-skeleton.ml
 
-This will create a new file in the exercise-1 folder called `wk3ex1.ml`.
+This will create a new file in the exercise-1 folder called `wk0ex1.ml`.
 
 This looks like this:
 
 ```ocaml
-let sort5 = failwith "To do: Implement sort5";;
+let zero = failwith "To do: Implement zero";;
 ```
 
-This is a starting point for you to complete the exercise.
+This is a starting point for you to complete the exercise. Just replace the code with:
+
+```ocaml
+let zero x = 0;;
+```
 
 ###Downloading New Assignments###
 
-Every week you'll be set new assignments.
+**Note:** Every week you'll be set new assignments.
 
-To download them, make sure you're in the `focs` folder, and type:
+To download them, make sure you're in the top-level folder (`focs-2015-16`), and type:
 
     git pull
 
@@ -130,7 +134,7 @@ Testing and Submitting Assignments:
 
 ###Getting a Canvas Access Token###
 
-In order for the marking script to upload your submission, you need to have an authentication token. This token will provide access to your canvas account, and should be treated as a password. Never share your access token with someone else, and it’s suggested that you only make this token available for a day, and generate a new one every time you submit an assignment.
+In order for the marking script to upload your submission, you need to have an authentication token. This token will provide access to your canvas account, and should be treated as a password. Never share your access token with someone else. (It’s suggested best practice that you only make this token available for a day, and generate a new one every time you submit an assignment.)
 
  - First, navigate to your profile settings on Canvas.
 
@@ -148,12 +152,12 @@ In order for the marking script to upload your submission, you need to have an a
 
 ###Testing and submitting###
 
-To test your assignments, you need to be in the `week-n` folder (e.g. `week-2`)
+To test your assignments, you need to be in the `week-n` folder (e.g. `week-0`)
 in a terminal session, and run the testing script for the exercise you're working on.
 
 As an example, this is how you'd test week 3's 1st exercise:
 
-    cd path/to/your/work/folder/focs-2015-16/week-3
+    cd path/to/your/work/folder/focs-2015-16/week-0
     python test_ex1.py
 
 The output should be self-explanatory. If you pass the test, it will ask you to
@@ -165,10 +169,7 @@ the terminal window then hit return.
 **Please don't try and upload your assignments to canvas manually!
 If you do, you'll get a mark of 0.**
 
-The list of current testing scripts is:
-
-    focs-2015-16/week-3/test_ex1.py
-    focs-2015-16/week-3/test_ex2.py
-    focs-2015-16/week-3/test_ex3.py
-
-If everything works out correctly you should see no further output. If there are any errors please contact us immediately!
+If everything works out correctly you should see no further output. If there are any errors please contact us immediately:
+- Dan Ghica <dan@ghica.net>
+- Bertie Wheen <wheen.b@gmail.com>
+- Kelsey McKenna <kelseyjmckenna@gmail.com>
