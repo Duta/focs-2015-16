@@ -3,6 +3,7 @@ Elements of Functional Computing
 
 Contains assignments for the UoB EFC module, 2015-16.
 
+<a name="folder-structure"></a>
 Folder Structure:
 -----------------
 
@@ -100,7 +101,7 @@ eval `opam config env`
 
    `cd focs-2015-16`
 
-Inside `focs-2015-16` will be files in the structure shown in the above image.
+Inside `focs-2015-16` will be files in the structure shown in the [folder structure section](#folder-structure).
 
 Let's get the week 3's 1st exercise:
 
