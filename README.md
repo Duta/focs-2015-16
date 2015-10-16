@@ -148,7 +148,7 @@ In order for the marking script to upload your submission, you need to have an a
 
 ![Access_Token](http://puu.sh/cg4h4/484c9902b8.jpg)
 
- -Give the token a name under the "Purpose" entry box, select a suitable date (Generally the next day) and generate the token.
+ - Give the token a name under the "Purpose" entry box, select a suitable date (Generally the next day) and generate the token.
 
 ![Generate_Token](http://puu.sh/cg4om/55cc8a6efa.jpg)
 
