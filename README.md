@@ -26,28 +26,16 @@ focs-2015-16
 
 Getting Set Up:
 ---------------
-
-**This section is only relevant if you are setting up your home machine. You only need to do this once! If you are submitting from a UG lab machine skip to the next [Section](#getting-the-assignment-files).**
-
-### Virtual Machine
-You can follow these steps to set up a virtual machine with (almost) everything pre-installed:  
-
-1. Download [VirtualBox](https://www.virtualbox.org/)
-2. Download the [VirtualBox image](http://www.cs.bham.ac.uk/~drg/focs.zip)
-  - This has Emacs, OCaml, Opam, Tuareg, Merlin, and utop. The password is `focs`.  
-3. Extract the zip folder, then open the file `focs.vbox`, which will then open up VirtualBox.
-4. Select the `focs` machine in VirtualBox and then click `Start` at the top left. (Any warnings can usually be ignored).
-5. Once Ubuntu has loaded, follow the other steps in this section.
+**If you are working in the lab, you only need to install the Python `requests` module.**
 
 ### Git
-
 The first thing you'll need is [git](http://git-scm.com/downloads).
 
 You may well have this installed already. To check, open a terminal and type:
 
     git --version
 
-If you get a message about 'git' not being found, then you'll need to [install it](http://git-scm.com/downloads).
+If you get a message about 'git' not being found, then you'll need to [install it](http://git-scm.com/downloads).  
 
 ### `Requests` Python module
 
@@ -64,8 +52,7 @@ You can do the same on the virtual machine image.
 You can then safely delete the `requests` folder.
 
 ### `Quickcheck` OCaml module
-
-If you haven't done it already, you need to initialise your OPAM repository and upgrade it and install the missing dependencies. 
+If you haven't done it already, you need to initialise your OPAM repository and upgrade it and install the missing dependencies.
 
 	opam init
 	opam upgrade
@@ -74,24 +61,33 @@ If you haven't done it already, you need to initialise your OPAM repository and 
 You will also need to upgrade your environment, as indicated by OPAM:
 
 	eval `opam config env`
-	
+
 ### Haskell modules ###
-
 Haskell is another dependency, in particular the packages `runhaskell` and `parsec`. They can be installed
-using `cabal` which comes with the Haskell platform. 
+using `cabal` which comes with the Haskell platform.
 
+
+### VirtualBox
+You can follow these steps to set up a virtual machine with (almost) everything pre-installed at home:
+
+1. Download [VirtualBox](https://www.virtualbox.org/)
+2. Download the [VirtualBox image](http://www.cs.bham.ac.uk/~drg/focs.zip)
+  - This has Emacs, OCaml, Opam, Tuareg, Merlin, and utop. The password is `focs`.  
+3. Extract the zip folder, then open the file `focs.vbox`, which will then open up VirtualBox.
+4. Select the `focs` machine in VirtualBox and then click `Start` at the top left. (Any warnings can usually be ignored).
+5. Once Ubuntu has loaded, follow the other steps in this section.
 
 <a name="getting-the-assignment-files"></a>
 Getting the assignment files
 ----------------------------
-
 Start a terminal session, and do the following steps:
 
 The default installation of OCaml is too old. To access the new installation you need to type these commands every time you use the lab machines:
-
-	module load OCaml
-	module load OPAM
-
+```
+module load OCaml
+module load OPAM
+eval `opam config env`
+```
  Then, navigate to the folder in which you store your work files:
 
    `cd path/to/your/work/folder`
@@ -126,8 +122,7 @@ This is a starting point for you to complete the exercise. Just replace the code
 let zero x = 0;;
 ```
 
-###Downloading New Assignments###
-
+### Downloading New Assignments ###
 **Note:** Every week you'll be set new assignments.
 
 To download them, make sure you're in the top-level folder (`focs-2015-16`), and type:
@@ -141,9 +136,7 @@ You may also need to do this from time to time if we add or change test scripts.
 
 Testing and Submitting Assignments:
 -----------------------------------
-
-###Getting a Canvas Access Token###
-
+### Getting a Canvas Access Token ###
 In order for the marking script to upload your submission, you need to have an authentication token. This token will provide access to your canvas account, and should be treated as a password. Never share your access token with someone else. (It’s suggested best practice that you only make this token available for a day, and generate a new one every time you submit an assignment.)
 
  - First, navigate to your profile settings on Canvas.
@@ -160,7 +153,7 @@ In order for the marking script to upload your submission, you need to have an a
 
  - You will be faced with a page that has your full token. Take a note of it as you’ll need it when running the testing script.
 
-###Testing and submitting###
+### Testing and submitting ###
 
 To test your assignments, you need to be in the `week-n` folder (e.g. `week-0`)
 in a terminal session, and run the testing script for the exercise you're working on.
@@ -176,12 +169,12 @@ hash value used for detecting plagiarism) to canvas. See the instructions above 
 how to get the token. Once it is displayed in a Canvas window copy-and-paste it into
 the terminal window then hit return.
 
-**Note:** The test script has been compiled with OCaml version 4.01.0. If you are using 
+**Note:** The test script has been compiled with OCaml version 4.01.0. If you are using
 a different version of OCaml you may get this error:
 ```
 Error: The file ex1_run.cmo is not a bytecode object file
 ```
-You will need to use the same version of the compiler as in the lab (or as close as possible). 
+You will need to use the same version of the compiler as in the lab (or as close as possible).
 
 Downgrading the OCaml installation to 4.01.0 is very easy with OPAM:
 ```
