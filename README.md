@@ -27,7 +27,16 @@ focs-2015-16
 Getting Set Up:
 ---------------
 
-**This section is only relevant if you are setting up your home machine. You only need to do this once! If you are submitting from a UG lab machine skip to the next [Section](https://github.com/Duta/focs-2015-16/blob/master/README.md#getting-the-assignment-files).**
+**This section is only relevant if you are setting up your home machine. You only need to do this once! If you are submitting from a UG lab machine skip to the next [Section](#getting-the-assignment-files).**
+
+### Virtual Machine
+You can follow these steps to set up a virtual machine with (almost) everything pre-installed:  
+1. Download [VirtualBox](https://www.virtualbox.org/)
+2. Download the [VirtualBox image](http://www.cs.bham.ac.uk/~drg/focs.zip)
+  - This has Emacs, OCaml, Opam, Tuareg, Merlin, and utop. The password is `focs`.
+3. Extract the zip folder, then open the file `focs.vbox`, which will then open up VirtualBox.
+4. Select the `focs` machine in VirtualBox and then click `Start` at the top left. (Any warnings can usually be ignored).
+5. Once Ubuntu has loaded, follow the other steps in this section.
 
 ### Git
 
@@ -71,6 +80,7 @@ Haskell is another dependency, in particular the packages `runhaskell` and `pars
 using `cabal` which comes with the Haskell platform. 
 
 
+<a name="getting-the-assignment-files"></a>
 Getting the assignment files
 ----------------------------
 
