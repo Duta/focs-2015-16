@@ -31,9 +31,10 @@ Getting Set Up:
 
 ### Virtual Machine
 You can follow these steps to set up a virtual machine with (almost) everything pre-installed:  
+
 1. Download [VirtualBox](https://www.virtualbox.org/)
 2. Download the [VirtualBox image](http://www.cs.bham.ac.uk/~drg/focs.zip)
-  - This has Emacs, OCaml, Opam, Tuareg, Merlin, and utop. The password is `focs`.
+  - This has Emacs, OCaml, Opam, Tuareg, Merlin, and utop. The password is `focs`.  
 3. Extract the zip folder, then open the file `focs.vbox`, which will then open up VirtualBox.
 4. Select the `focs` machine in VirtualBox and then click `Start` at the top left. (Any warnings can usually be ignored).
 5. Once Ubuntu has loaded, follow the other steps in this section.
