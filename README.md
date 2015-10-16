@@ -105,7 +105,7 @@ Inside `focs-2015-16` will be files in the structure shown in the [folder struct
 
 Let's get the week 3's 1st exercise:
 
-    cd week-0/exercise-1
+    cd week-3/exercise-1
 
     ocaml gen-skeleton.ml
 
@@ -161,7 +161,7 @@ in a terminal session, and run the testing script for the exercise you're workin
 
 As an example, this is how you'd test week 3's 1st exercise:
 
-    cd path/to/your/work/folder/focs-2015-16/week-0
+    cd path/to/your/work/folder/focs-2015-16/week-3
     python test_ex1.py
 
 The output should be self-explanatory. If you pass the test, it will ask you to
