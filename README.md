@@ -6,6 +6,8 @@ Getting Set Up:
 ---------------
 **If you are working in the lab, you only need to install the Python `requests` module.**
 
+**Note:** If you are working at home and you need to submit but are unable to install this marking script you can always `ssh` into a lab machine and execute the script there. 
+
 ### Git
 The first thing you'll need is [git](http://git-scm.com/downloads).
 
@@ -165,7 +167,7 @@ Done!
 If you do, you'll get a mark of 0.**
 
 If everything works out correctly you should see no further output. If there are any errors please contact us immediately:
-- Dan Ghica <dan@ghica.net>
+
 - Bertie Wheen <wheen.b@gmail.com>
 - Kelsey McKenna <kelseyjmckenna@gmail.com>
 
