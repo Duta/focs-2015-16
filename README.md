@@ -1,29 +1,6 @@
 Elements of Functional Computing
 ================================
 
-Contains assignments for the UoB EFC module, 2015-16.
-
-<a name="folder-structure"></a>
-Folder Structure:
------------------
-
-```
-focs-2015-16
-|-- README.md
-|-- StripComments.hs
-|-- bench.cmi
-|-- bench.cmo
-|-- prepare_env.csh
-|-- test.py
-|-- validator.py
-`-- week-3
-    |-- exercise-1
-    |   `-- gen-skeleton.ml
-    |-- exercise-2
-    |   `-- gen-skeleton.ml
-    `-- exercise-3
-        `-- gen-skeleton.ml
-```
 
 Getting Set Up:
 ---------------
@@ -191,3 +168,27 @@ If everything works out correctly you should see no further output. If there are
 - Dan Ghica <dan@ghica.net>
 - Bertie Wheen <wheen.b@gmail.com>
 - Kelsey McKenna <kelseyjmckenna@gmail.com>
+
+Folder Structure:
+-----------------
+Contains assignments for the UoB EFC module, 2015-16.
+
+<a name="folder-structure"></a>
+
+```
+focs-2015-16
+|-- README.md
+|-- StripComments.hs
+|-- bench.cmi
+|-- bench.cmo
+|-- prepare_env.csh
+|-- test.py
+|-- validator.py
+`-- week-3
+    |-- exercise-1
+    |   `-- gen-skeleton.ml
+    |-- exercise-2
+    |   `-- gen-skeleton.ml
+    `-- exercise-3
+        `-- gen-skeleton.ml
+```
