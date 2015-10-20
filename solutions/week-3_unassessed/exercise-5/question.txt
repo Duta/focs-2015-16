@@ -1,0 +1,30 @@
+(hardest) Write a function loop that takes 4 pairs. Each pair represents labels on a diagram. The function should return true if and only if the 4 pairs represent a loop. For example:
+
+loop (1,2) (2,3) (3,4) (4,1) = true
+loop (1,2) (2,3) (4,1) (3,4) = true
+
+Because these 4 pairs represent this loop:
+1 ---> 2
+^      |
+|      |
+|      v
+4 <--- 3
+
+But loop (1,2) (3,2) (3,4) (4,1) = false because (3,2) points the wrong way:
+1 ---> 2
+^      ^
+|      |
+|      |
+4 <--- 3
+
+Also, obviously, loop (1,2) (2,3) (5,4) (4,1) = false.
+1 ---> 2
+^      |
+|      |
+|      v
+4      3
+^
+|
+|
+5
+

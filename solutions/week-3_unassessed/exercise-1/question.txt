@@ -1,0 +1,5 @@
+Write an OCaml function with the following signature:
+
+int_of_day : weekday -> int
+
+which calculates how many days are from Sunday to the weekday given as arguments.

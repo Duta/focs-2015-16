@@ -1,0 +1,5 @@
+(harder) Write a function perm4 which takes as arguments two 4-tuples and checks whether they are permutations of each other. 
+
+Example:
+perm4 (1,3,5,7) (1,7,3,5) = true
+perm4 (1,2,3,4) (1,1,2,3) = false

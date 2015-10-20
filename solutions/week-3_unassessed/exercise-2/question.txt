@@ -1,0 +1,5 @@
+Write an OCaml function with signature
+
+days_of_october : int -> weekday
+
+which will take as argument a number between 1 and 31 and calculate what day of the week that is in October 2014. You may assume that the input is correct.

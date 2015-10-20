@@ -1,0 +1,7 @@
+(harder) Write an OCaml function with signature
+
+is_bij : (bool -> bool) -> bool
+
+which tests whether its argument is a bijective function, which means it returns true if the argument is bijective and false otherwise.
+
+Hint: A function is said to be bijective if it produces a different output for every input and every possible output value can be produced using some input.
