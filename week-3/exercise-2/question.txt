@@ -1,4 +1,4 @@
-(2pts) Write a function that finds the median (middle) element of a 5-tuple. 
+(3pts) Write a function that finds the median (middle) element of a 5-tuple. 
 For example,
 mid5 (1, 3, 4, 2, 5) = 3
 mid5 (4, 1, 1, 1, 4) = 1
