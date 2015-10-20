@@ -132,7 +132,7 @@ Exiting...
         print 'The submission to Canvas failed, please show a demonstrator the following error:'
         print submission_info['errors']
     else:
-        print 'Your assignment has been submitted to Canvas. Well done!'
+        print 'There were no errors during execution, please check Canvas to confirm your assignment was submitted.'
 
 def check_integrity():
     if not os.path.exists("cmos/files.sha256sums"):
