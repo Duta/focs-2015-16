@@ -1,0 +1,3 @@
+(3pts) Implement an OCaml function called tne of type  ((('a -> 'b) -> 'b) -> 'c) -> 'a -> 'c.
+
+Important: You may only use function definition (let) and function application. 
