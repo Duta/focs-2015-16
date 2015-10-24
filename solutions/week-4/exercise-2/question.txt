@@ -1,0 +1,1 @@
+(4pts) Implement an isomorphism called dec that encodes a pair (bool, bool) into a function bool -> bool . 
