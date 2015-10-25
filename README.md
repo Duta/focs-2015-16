@@ -1,4 +1,4 @@
-Elements of Functional Computing
+Elements of Functional Computing 🐪
 ================================
 
 
