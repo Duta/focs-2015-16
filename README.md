@@ -1,6 +1,6 @@
-Elements of Functional Computing 🐪
+Elements of Functional Computing
 ==================================
-
+🐪
 
 Getting Set Up:
 ---------------
