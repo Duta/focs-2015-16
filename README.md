@@ -1,6 +1,5 @@
-Elements of Functional Computing
+Elements of Functional Computing <img src="http://opam.ocamlpro.com/ext/img/ocaml.png" width="50">
 ==================================
-🐪
 
 Getting Set Up:
 ---------------
