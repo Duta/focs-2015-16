@@ -1,0 +1,20 @@
+(4pts) Implement a function that takes a list and a positive int and 'shift-rotates' the list by moving the head to the end of the list as many times as the second argument specifies. 
+
+The signature of the function is  val shiftrotate : 'a list -> int -> 'a list 
+
+Some examples:
+
+# shiftrotate [1;2;3;4] 0;;
+- : int list = [1; 2; 3; 4]
+# shiftrotate [1;2;3;4] 1;;
+- : int list = [2; 3; 4; 1]
+# shiftrotate [1;2;3;4] 2;;
+- : int list = [3; 4; 1; 2]
+# shiftrotate [1;2;3;4] 3;;
+- : int list = [4; 1; 2; 3]
+# shiftrotate [1;2;3;4] 4;;
+- : int list = [1; 2; 3; 4]
+# shiftrotate [1;2;3;4] 10;;
+- : int list = [3; 4; 1; 2]
+# shiftrotate [] 100;;
+- : 'a list = []

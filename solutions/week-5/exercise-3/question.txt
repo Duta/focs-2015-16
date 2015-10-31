@@ -1,0 +1,17 @@
+(3pts) Write a function that computes the histogram of a list. It takes as argument a list and returns a list of pairs which indicates how many times a given element occurs in the original list. 
+
+The signature is val histo : 'a list -> ('a * int) list.
+
+Some examples:
+
+# histo [1;2;3;4;3;2;1;3;4;5;6;7;5] ;;
+- : (int * int) list =
+[(7, 1); (6, 1); (5, 2); (4, 2); (3, 3); (2, 2); (1, 2)]
+# histo [];;
+- : ('a * int) list = []
+# histo [1;2;3] ;;
+- : (int * int) list = [(3, 1); (2, 1); (1, 1)]
+# histo [1;1;1;1];;
+- : (int * int) list = [(1, 4)]
+# histo [1;2;1;2;1;2];;
+- : (int * int) list = [(2, 3); (1, 3)]
