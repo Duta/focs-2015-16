@@ -3,7 +3,7 @@
 loop : ('a * 'b) list -> bool
 
 These are examples of loops:
-loop [(1,2); (2,3); (3;1)] = true
+loop [(1,2); (2,3); (3,1)] = true
 loop [(1,2); (3,1); (2,3)] = true
 because they both include the path 2->3->1->2 which is a loop.
 
