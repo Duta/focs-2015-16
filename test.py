@@ -1,5 +1,8 @@
 import base64, requests, subprocess, os, os.path, validator
 
+import requests.packages.urllib3
+requests.packages.urllib3.disable_warnings()
+
 # assignment_code :: str
 # week            :: str
 # exercise        :: str (usually '1', '2' or '3')
