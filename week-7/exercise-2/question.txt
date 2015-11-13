@@ -1,0 +1,14 @@
+(3pts) Remember the function that calculates the symmetric difference of two lists. An inefficient implementation is this:
+
+let rec dif xs ys = match xs with 
+| [] -> []
+| x :: xs when List.mem x ys -> dif xs ys
+| x :: xs -> x :: (dif xs ys)
+
+let rec sim_dif xs ys = (dif xs ys) @ (dif ys xs)
+
+Your task is to reimplement the sim_dif function so that it works on large lists without overflowing the stack. The result of the function should consists of the elements that occur only in one of the lists. Their order does not matter. 
+
+Hints:
+
+In order to work on large lists your function must be tail-recursive.

@@ -1,0 +1,5 @@
+wk7ex1.proof is an incomplete proof of the involution example we did in the lecture.
+
+Replace the incomplete proofs marked as TODO with the actual proofs.
+The missing proofs in this case always consist of an equation label
+followed by the keyword "with" followed by a ;-separate list.
