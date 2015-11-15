@@ -1,0 +1,12 @@
+(3pts) Remember the function that calculates the symmetric difference of two lists. An inefficient implementation is this:
+
+let rec dif xs ys = match xs with 
+| [] -> []
+| x :: xs when List.mem x ys -> dif xs ys
+| x :: xs -> x :: (dif xs ys)
+
+let rec sim_dif xs ys = (dif xs ys) @ (dif ys xs)
+
+Your task is to reimplement the sim_dif function so that it works efficiently on large lists. The result of the function should consists of the elements that occur only in one of the lists. Their order does not matter. 
+
+Note: A similar question was given in a Facebook job interview. 
