@@ -1,0 +1,55 @@
+Signatures:
+    app  : _a list -> _a list -> _a list ;
+    rev  : _a list -> _a list ;
+
+Definitions:
+    [app nil] : forall xs : _a list . app [] xs = xs : _a list ;
+    [app xs]  : forall xs : _a list . forall x : _a . forall ys : _a list . app (x::xs) ys = x :: app xs ys : _a list ;
+    [rev nil] : rev [] = [] : _a list ;
+    [rev xs]  : forall xs : _a list . forall x : _a . rev (x :: xs) = app (rev xs) (x :: []) : _a list ;
+
+(*************************)
+(* first we need a lemma *)
+(*******************************************)
+(* app (app xs ys) zs = app xs (app ys zs) *)
+(* Base:                                   *)
+(* app (app [] ys) zs                      *)
+(* = app ys zs                             *)
+(* = app [] (app ys zs)                    *)
+(*                                         *)
+(* Step:                                   *)
+(* app (app (x::xs) ys) zs                 *)
+(* = app (x::(app xs ys)) zs               *)
+(* = x::(app (app xs ys) zs)               *)
+(* = x::(app xs (app ys zs))               *)
+(* = app (x::xs) (app ys zs)               *)
+(*******************************************)
+Theorem [lemma]:
+    Statement: forall xs : _a list . forall ys : _a list . forall zs : _a list .
+               app (app xs ys) zs = app xs (app ys zs) : _a list
+    Proof:
+        by induction on list:
+        case nil:
+            assume ys : _a list.
+            assume zs : _a list.
+            we know [prem 1] : app [] ys = ys : _a list because [app nil] with (ys).
+            we know [prem 2] : app [] (app ys zs) = (app ys zs) : _a list because [app nil] with (app ys zs).
+
+            we know [step 1] : app (app [] ys) zs = app ys zs : _a list because equality on ([prem 1]).
+            we know [step 2] : app (app [] ys) zs = app [] (app ys zs) : _a list because equality on ([step 1];[prem 2]).
+            by [step 2]
+        case (x::xs): [IH] : forall ys : _a list . forall zs : _a list .
+                             app (app xs ys) zs = app xs (app ys zs) : _a list .
+            assume ys : _a list.
+            assume zs : _a list.
+            we know [prem 1] : app (x::xs) ys = x::(app xs ys) : _a list because [app xs] with (xs;x;ys).
+            we know [prem 2] : app (x::(app xs ys)) zs = x::(app (app xs ys) zs) : _a list because [app xs] with (app xs ys;x;zs).
+            we know [prem 3] : app (app xs ys) zs = app xs (app ys zs) : _a list because [IH] with (ys;zs).
+            we know [prem 4] : app (x::xs) (app ys zs) = x::(app xs (app ys zs)) : _a list because [app xs] with (xs;x;app ys zs).
+
+            we know [step 1] : app (app (x::xs) ys) zs = app (x::(app xs ys)) zs : _a list because equality on ([prem 1]).
+            we know [step 2] : app (app (x::xs) ys) zs = x::(app (app xs ys) zs) : _a list because equality on ([step 1];[prem 2]).
+            we know [step 3] : app (app (x::xs) ys) zs = x::(app xs (app ys zs)) : _a list because equality on ([step 2];[prem 3]).
+            we know [step 4] : app (app (x::xs) ys) zs = app (x::xs) (app ys zs) : _a list because equality on ([step 3];[prem 4]).
+            by [step 4]
+    QED.
