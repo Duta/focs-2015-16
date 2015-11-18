@@ -4,7 +4,7 @@ let rec rmhead x = function
   | y :: ys when x = y -> rmhead x ys
   | ys -> ys
   
-(* Note: This works on sorted functions only! 
+(* Note: This works on sorted lists only! 
    We go through both arguments at the same time.
    The argument zs is an accumulator for a tail-recursive implementation. *)
 let rec sim_dif' xs ys zs = match (xs, ys) with
