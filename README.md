@@ -2,6 +2,15 @@ Elements of Functional Computing
 ==================================
 <img src="http://opam.ocamlpro.com/ext/img/ocaml.png" width="50">
 
+Contents
+--------
+1. [Getting Set Up](#getting-set-up)
+2. [Getting the Assignment Files](#getting-the-assignment-files)
+3. [Testing Assignments](#testing-assignments)
+4. [Working with Pre-Week-7 Assignments](#pre-week-7)
+5. [Folder Structure](#folder-structure)
+
+<a name="getting-set-up"></a>
 Getting Set Up:
 ---------------
 **If you are working in the lab, you only need to install the Python `requests` module.**
@@ -58,7 +67,7 @@ You can follow these steps to set up a virtual machine with (almost) everything 
 5. Once Ubuntu has loaded, follow the other steps in this section.
 
 <a name="getting-the-assignment-files"></a>
-Getting the assignment files
+Getting the Assignment Files
 ----------------------------
 Start a terminal session, and do the following steps:
 
@@ -113,7 +122,7 @@ This will download any new assignments, making sure you're up to date.
 
 You may also need to do this from time to time if we add or change test scripts.
 
-
+<a name="testing-assignments"></a>
 Testing and Submitting Assignments:
 -----------------------------------
 ### Getting a Canvas Access Token ###
@@ -170,6 +179,19 @@ If everything works out correctly you should see no further output. If there are
 
 - Bertie Wheen <wheen.b@gmail.com>
 - Kelsey McKenna <kelseyjmckenna@gmail.com>
+
+<a name="pre-week-7"></a>
+Working with Pre-Week-7 Assignments
+-----------------------------------
+The `bench.cmi` and `bench.cmo` files were changed in week 7, so if you wish to run the tests for assignments before week 7, then I suggest you clone a fresh copy of the repo, and then run reset the repository to the point before the files were updated. Here are the commands you should execute:
+
+1. `git clone https://github.com/duta/focs-2015-16`
+2. `cd focs-2015-16`
+2. `git reset --hard 834f9912cd88b8106f3c633da1efd968d0c3c211`
+
+And now you can work with pre-week-7 assignments as normal. 
+
+Alternatively, you can download the old `bench.cmi` and `bench.cmo` files [here](https://github.com/Duta/focs-2015-16/tree/834f9912cd88b8106f3c633da1efd968d0c3c211), and replace your current ones. Just make sure to copy and paste the new `bench.cmi` and `bench.cmo` files into your repo before you work with the week-7 and week-8 assignments.
 
 Folder Structure:
 -----------------
