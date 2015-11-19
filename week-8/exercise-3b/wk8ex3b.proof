@@ -1,4 +1,4 @@
-Author: Yu-Yang Lin *)
+(* author: Yu-Yang Lin *)
 (* date: 16/11/2015 *)
 (* This file contains a proof for: head xs = last (rev xs)*)
 Signatures:
