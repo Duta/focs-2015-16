@@ -1,0 +1,6 @@
+(4pts) Write an OCaml function that will substitute all occurrences of an element in a list by a different element. The argument will have small-to-moderate size and performance considerations are not critical.
+
+# replace;;
+- : 'a -> 'a -> 'a list -> 'a list = <fun>
+# replace 2 0 [1;2;3;4;3;2;1];;
+- : int list = [1; 0; 3; 4; 3; 0; 1]

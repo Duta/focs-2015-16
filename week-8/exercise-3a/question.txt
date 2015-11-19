@@ -1,0 +1,15 @@
+(3pts) You are given two lists that have as elements either integers or characters. The characters stand for variables of unknown values. You need to solve the following puzzle: Is there a way to give values to variables so that the two lists are equal? 
+
+For example [x, 1, x] and [3, y, 3] is solvable for x = 3 and y = 1 whereas [x, x, 0] and [1, 2, z] is not solvable. 
+
+Your task is to write an OCaml function that checks whether a puzzle is solvable or not. 
+
+type puzzle = K of int | U of char
+
+# solvable;;
+- : puzzle list -> puzzle list -> bool = <fun>
+
+# solvable [U 'x'; K 1; U 'x'] [K 3; U 'y'; K 3] ;;
+- : bool = true
+# solvable [U 'x'; U 'x'; K 0] [K 1; K 2; U 'z'];;
+- : bool = false
