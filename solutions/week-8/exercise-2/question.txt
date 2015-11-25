@@ -1,0 +1,12 @@
+(3pts) Write an OCaml function that splits a list into list segments containing only identical elements. The function must work on small-to-moderate size lists. Performance of implementation is not critical.
+
+# split;;
+- : 'a list -> 'a list list = <fun>
+# split [1;2;2;3;3;3;4;4;5;6];;
+- : int list list = [[1]; [2; 2]; [3; 3; 3]; [4; 4]; [5]; [6]]
+# split [];;
+- : 'a list list = []
+# split [1];;
+- : int list list = [[1]]
+# split [1;2;3;3;2;2;1;1];;
+- : int list list = [[1]; [2]; [3; 3]; [2; 2]; [1; 1]]
