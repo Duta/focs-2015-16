@@ -24,6 +24,6 @@ val r1 : Num.num = <num 6>
 # let f x = (x -/ r0) */ (x -/ r1) ;;
 val f : Num.num -> Num.num = <fun>
 # root f (num_of_int 5) (num_of_int 8) (num_of_int 1 // num_of_int 100);;
-- : Num.num = <num 5123/1024>
+- : Num.num = <num 6143/1024>
 # root f (num_of_int 5) (num_of_int 8) (num_of_int 1 // num_of_int 1000);;
-- : Num.num = <num 40963/8192>
+- : Num.num = <num 49153/8192>
