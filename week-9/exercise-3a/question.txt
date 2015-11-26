@@ -1,0 +1,11 @@
+Given a list of native int values correctly calculate its sum. If there is an order in which the elements can be added so that there is no overflow, that order is used. For example the sum of the list  [max_int, max_int, -max_int] should be Some max_int. In case of unavoidable overflow the function should return None.
+
+Note: You are not allowed to use any arbitrary precision library but, for efficiency, you must operate directly on the native int type of OCaml. 
+
+val add : int list -> int option = <fun>
+# let m = max_int;;
+val m : int = 4611686018427387903
+# let _ = add [m; -1; -m; 2; -m; 8; 9; m];;
+- : int option = Some 18
+# let _ = add [m; 1; m; -5];;
+- : int option = None
