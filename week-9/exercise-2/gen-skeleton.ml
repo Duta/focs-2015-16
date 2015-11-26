@@ -1,4 +1,6 @@
-let contents = "let root = failwith \"To do: Implement root\";;
+let contents = "open Num;;
+
+let root = failwith \"To do: Implement root\";;
 "
 
 let () =

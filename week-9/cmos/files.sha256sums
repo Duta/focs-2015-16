@@ -18,7 +18,7 @@ e6b81d402561a17797de13b5521e0f50ed99890290e2efa01df6bb13eda309da  ./cmos/ex3b_ru
 4874c9622f66df708d00e2c69c6df141c8e9064aa1096db20d7594f8e65cfce5  ./exercise-1/wk9ex1.mli
 fd7efa0675d8f4cff6b4108d7d021d4bc0fe1c5672b2b8fcc50fecd975175bfe  ./exercise-1/gen-skeleton.ml
 1c819ebf88cda96bf97e1bc99c317296429ec13f856eb43085577df161a0efde  ./exercise-2/wk9ex2.mli
-6d03821db57c5cad7b131d444698b3ec49b6f7fd7326a12822c5ff4d5aa11c53  ./exercise-2/gen-skeleton.ml
+774b0ed2fa8020959aaea4c23ad102e71b76de8228b2d9ad55ec2328bdcf5aa6  ./exercise-2/gen-skeleton.ml
 e5f318de4676f6fe0802c186c144a2549c7971e402519d1e07d1964b501e9750  ./exercise-3a/wk9ex3a.mli
 e805a32d76e4bcb093da2191e59aacc5fb91cd7bfc703339974aae77d46577eb  ./exercise-3a/gen-skeleton.ml
 228f06b1927b682578b13a64239842b868bc42deb2d86d00df358b0400af2d2c  ./exercise-3b/gen-skeleton.ml
