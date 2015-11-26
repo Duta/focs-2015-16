@@ -50,7 +50,7 @@ packages = ['str', 'quickcheck', 'unix']
 # assignment_code :: str
 # week            :: str
 # exercise        :: str (usually '1', '2' or '3')
-def test(assignment_code, week, exercise, *checks):
+def test(assignment_code, week, exercise, extra_links=[],*checks):
     # Helper functions
     no_assmt_msg = """
 File %s not found. You can create a skeleton
@@ -60,8 +60,7 @@ and then running `ocaml gen-skeleton.ml`.
 Exiting...
 """.strip()
     ensure_file_assmt = lambda file: ensure_file(file, no_assmt_msg % (file, os.path.dirname(file)))
-
-    # File names
+	  # File names
     ex_folder = 'exercise-' + exercise
     ex_name = 'ex'+exercise
     ex_full_name = 'wk' + week + ex_name
@@ -116,7 +115,7 @@ Exiting...
 
         '-linkpkg',
         '-package',
-        ','.join(packages),
+        ','.join(packages + extra_links),
 
         'common.cmo' if week_has_common else '',
         'bench.cmo',
