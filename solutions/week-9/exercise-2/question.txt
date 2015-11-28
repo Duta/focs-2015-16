@@ -1,0 +1,29 @@
+Using OCaml's rational numbers library Num (http://caml.inria.fr/pub/docs/manual-ocaml/libref/Num.html) write a general purpose arbitrary precision root-finding (https://en.wikipedia.org/wiki/Root_finding) function using any algorithm you choose (e.g. bisection [https://en.wikipedia.org/wiki/Bisection_method] or secant [https://en.wikipedia.org/wiki/Secant_method]). 
+
+The function  root : (Num.num -> Num.num) -> Num.num -> Num.num -> Num.num -> Num.num should take the following arguments: 
+
+f : Num.num -> Num.num is the function expressing the equation
+a : Num.num is the left endpoint of the interval where the root lies
+b : Num.num is the right endpoint of the interval 
+err : Num.num is the margin of error we can tolerate
+The function root should return a root r : Num.num that lies within the interval (r-err, r+err). 
+
+Note: The library Num is not loaded into the OCaml top-level. To load it you need to execute the following top-level commands:
+
+# #use "topfind";;
+# #require "num";;
+# open Num;;
+
+Here is an example usage of the function root to find solutions to the equation (x-4)*(x-6)=0 with error 1/100 then with error 1/1000:
+
+val root : (Num.num -> Num.num) -> Num.num -> Num.num -> Num.num -> Num.num = <fun>
+# let r0 = num_of_int 4;;
+val r0 : Num.num = <num 4>
+# let r1 = num_of_int 6;;
+val r1 : Num.num = <num 6>
+# let f x = (x -/ r0) */ (x -/ r1) ;;
+val f : Num.num -> Num.num = <fun>
+# root f (num_of_int 5) (num_of_int 8) (num_of_int 1 // num_of_int 100);;
+- : Num.num = <num 5123/1024>
+# root f (num_of_int 5) (num_of_int 8) (num_of_int 1 // num_of_int 1000);;
+- : Num.num = <num 40963/8192>

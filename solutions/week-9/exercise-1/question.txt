@@ -1,0 +1,11 @@
+Implement subtraction for Peano numbers. The function needs to be tail-recursive. 
+
+
+type nat = Zero | Suc of nat;;
+val sub : nat -> nat -> nat = <fun>
+# sub (Suc Zero) Zero ;;
+- : nat = Suc Zero
+# sub (Suc (Suc Zero)) (Suc Zero);;
+- : nat = Suc Zero
+# sub Zero (Suc Zero);;
+Exception: Failure "sub".

@@ -1,0 +1,31 @@
+(* author: Yu-Yang Lin *)
+(* date: 23/11/2015 *)
+(* This file contains a proof for associativity of add. *)
+
+Signatures:
+    add   : nat -> nat -> nat;
+
+Definitions:
+    [add 0] : forall n : nat . add zero n = n : nat;
+    [add m] : forall m : nat . forall n : nat . add (suc m) n = suc(add m n) : nat;
+
+Theorem [add assoc]:
+    Statement: forall m : nat . forall n : nat . forall o : nat . add m (add n o) = add (add m n) o : nat
+    Proof:
+        by induction on nat:
+        case zero:
+            assume n : nat.
+            assume o : nat.
+            we know [1] : add zero (add n o) = add n o : nat because [add 0] with (add n o).
+            we know [2] : add zero n         = n       : nat because [add 0] with (n).
+            equality on ([1];[2])
+        case (suc m): [IH] : forall n : nat . forall o : nat . add m (add n o) = add (add m n) o : nat.
+            assume n : nat.
+            assume o : nat.
+            we know [1] : add (suc m) (add n o) = suc (add m (add n o)) : nat because [add m] with (m;add n o).
+            we know [2] : add m       (add n o) = add (add m n) o       : nat because [IH]    with (n;o).
+            we know [3] : add (suc (add m n)) o = suc (add (add m n) o) : nat because [add m] with (add m n;o).
+            we know [4] : add (suc m) n         = suc (add m n)         : nat because [add m] with (m;n).
+            we know [5] : add (suc m) (add n o) = add (add (suc m) n) o : nat because equality on ([1];[2];[3];[4]).
+            by [5]
+    QED.
