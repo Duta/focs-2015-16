@@ -4,10 +4,10 @@
 003080d459b77cfdcbb46507da02d03d1a51474fc39024f69c922a892d19b8ce  ./cmos/ex1_test.cmo
 e74b6f4890fa192f28b0ad035718a110984c600b1ea3c20524e30cdf1e0ec962  ./cmos/ex1_run.cmi
 2429b2c0aeea6a0f00a254b054e0bc139d4ae0379ed9e0b598cc0ca396562440  ./cmos/ex1_run.cmo
-8cf41ebda6ddc91ae3b0b5e1ff00fcec9abf7d48f24c12f6f76883b338b65558  ./cmos/ex2_test.cmi
-06403cbed76979c522ebde2f039f2daa87eca9f57d007aa77b8a5816b4f0e9eb  ./cmos/ex2_test.cmo
-c606f9634f7a56fa1a057e8c08048a85f3deb810267155417f7c2d0aab144e4f  ./cmos/ex2_run.cmi
-15427acecb27e4dfd6f3737df33cec496011cb19726a7d4c14df061e4615fb4e  ./cmos/ex2_run.cmo
+391ab7a2b3e7e6ba9aae8d2ee6f2bc26787ff937df07012a14ec3084bce619a5  ./cmos/ex2_test.cmi
+fdec0a82fa91e0e3b10e22b0bb0562382adda25ae4c4d63d53e2bf7e90b7b065  ./cmos/ex2_test.cmo
+8ec7ecd8b4c88ea19dabc3b4b3b805f41e4707efb59e3f7ba39a9a65ee6f75c3  ./cmos/ex2_run.cmi
+ec28212cb80afb64611c9c07b1836d6a879553383c40a8f05dfe4a5a1d425b03  ./cmos/ex2_run.cmo
 a7b1536f3930ba0f3fa2f2014e97fe96e9ebf8a70579e02d80059dbfb1992bae  ./cmos/ex3_test.cmi
 2bca91117ed11dabca5f290e60d58654cbb165cf09eecc04b54e63244ac902ed  ./cmos/ex3_test.cmo
 a2abd43d5d88c8226879d5490a5a37cc4fed699198ae03ebde35ec5f32aef673  ./cmos/ex3_run.cmi
