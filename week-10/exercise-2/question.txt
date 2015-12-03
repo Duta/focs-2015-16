@@ -1,0 +1,16 @@
+A priority queue is a queue in which each element has an associated integer value called "the priority". When a new element is added to the queue it must be inserted before all elements with strictly lower priority and after all elements with priority greater or equal. 
+
+Implement an efficient priority queue using banker's queue algorithm, which has the following enqueue and dequeue functions:
+
+val enq : 'a * int -> ('a * int) list * ('a * int) list -> ('a * int) list * ('a * int) list
+
+val deq : ('a * int) list * ('a * int) list -> 'a * (('a * int) list * ('a * int) list)
+
+For example, 
+
+let q = enq (a, 1) q 
+let q = enq (b, 3) q 
+let q = enq (c, 1) q 
+let x, q = deq q      (* x should be equal to b *)
+let x, q = deq q      (* x should be equal to a *)
+let x, q = deq q      (* x should be equal to c *)
