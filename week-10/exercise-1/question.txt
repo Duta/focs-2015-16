@@ -14,5 +14,3 @@ let q = enq (c, 1) q
 let x, q = deq q      (* x should be equal to b *)
 let x, q = deq q      (* x should be equal to a *)
 let x, q = deq q      (* x should be equal to c *)
-
- Note: The solution to Assignment 10.2 will be a valid solution for 10.1. 
