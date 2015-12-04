@@ -47,6 +47,9 @@ run_command = lambda command: subprocess.call(command, shell=True)
 remove_file = lambda file: run_command('rm -rf ' + file)
 packages = ['str', 'quickcheck', 'unix']
 
+import requests.packages.urllib3
+requests.packages.urllib3.disable_warnings()
+
 # assignment_code :: str
 # week            :: str
 # exercise        :: str (usually '1', '2' or '3')
