@@ -1,0 +1,27 @@
+You need to write a function that solves a llama situation.
+
+solve : llama list -> (int * move) list option
+
+Given the llama situation the function will produce a list of llama moves which will lead to a solved llama situation, or none if such a solution does not exist. Your solution must work (i.e. run in a reasonable amount of time) for arbitrary llama situations of size up to 15.
+
+Example:
+
+# solve [R; O; L];;
+- : (int * move) list option = Some [(0, MR); (0, JR)]
+# solve [R; R; O; O; L; L];;
+- : (int * move) list option =
+Some
+[(1, MR); (0, MR); (1, MR); (3, JL); (4, ML); (1, JL); (4, JL); (0, ML);
+(3, JL)]
+# solve [R; R; L; L];;
+- : (int * move) list option = None
+# solve [R; R; R; R; R; R; R; R; R; O; O; O; L; L; L];;
+- : (int * move) list option =
+Some
+[(8, MR); (7, MR); (6, MR); (5, MR); (4, MR); (3, MR); (2, MR); (1, MR);
+(0, MR); (8, MR); (7, MR); (6, MR); (5, MR); (4, MR); (3, MR); (2, MR);
+(1, MR); (0, MR); (8, MR); (10, JL); (11, ML); (9, JR); (7, JR); (6, MR);
+(8, JL); (10, JL); (12, JL); (11, MR); (9, JR); (7, JR); (5, JR); (4, MR);
+(6, JL); (8, JL); (10, JL); (9, MR); (7, JR); (5, JR); (3, JR); (2, MR);
+(4, JL); (6, JL); (8, JL); (7, MR); (5, JR); (3, JR); (1, JR); (0, MR);
+(1, JL); (4, JL); (6, JL); (5, MR); (3, JR); (1, JR); (2, ML); (4, JL)]

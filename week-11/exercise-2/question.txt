@@ -1,0 +1,28 @@
+A llama can move left or right, or jump over another llama left or right.
+
+type move = ML | MR | JL | JR
+
+Remember that in order to move or jump, the landing position must be free (represented by O in the llama situation). Remember that a llama can only jump over another llama which is facing the opposite way. A full representation of a llama move is given by a pair (int * move) where the integer represents the index of the llama in the situation and the move the move it is making. A llama move results in a new llama situation.
+
+Your job is to write a function
+
+play : llama list -> (int * move) list -> llama list option
+
+which applies a list of moves to a llama situation and produces either some llama situation or none if at least one of the moves attempted is illegal.
+
+Example:
+
+# let ls = [R; O; R; L];;
+val ls : llama list = [R; O; R; L]
+# play ls [(0, MR)];;
+- : llama list option = Some [R; R; L]
+# play ls [(3, JR)];;
+- : llama list option = None
+# play ls [(3, JL)];;
+- : llama list option = Some [R; L; R]
+# play ls [(3, JL); (1, JL)];;
+- : llama list option = Some [L; R; O; R]
+# play ls [(3, JL); (1, JL); (0, ML)];;
+- : llama list option = Some [L; O; R; O; R]
+# play ls [(3, JL); (1, JL); (0, ML); (2, MR)];;
+- : llama list option = Some [L; O; O; R; R]
