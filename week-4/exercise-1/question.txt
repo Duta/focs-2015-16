@@ -1,1 +1,1 @@
-(3pts) Implement an isomorphism called enc that encodes a function bool -> bool into a pair bool * bool. 
+(3pts) Implement an isomorphism called enc that encodes a function bool -> bool into a pair bool * bool.
