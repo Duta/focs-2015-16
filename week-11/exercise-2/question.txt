@@ -1,4 +1,4 @@
-A llama can move left or right, or jump over another llama left or right.
+A llama can move left if it is denoted by 'L', or right if it is denoted by R, or jump over another llama left or right.
 
 type move = ML | MR | JL | JR
 
