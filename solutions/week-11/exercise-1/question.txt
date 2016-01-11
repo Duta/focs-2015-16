@@ -1,0 +1,20 @@
+We represent a llama situation as a list of llamas, where:
+
+type llama = L | R | O
+
+L is a left-facing llama, R is a right-facing llama and O represents a gap between two llamas. Note that in a legal representation of a llama situation there are no leading or trailing O's.
+
+We say that the llama situation is solved if all the left-facing llamas (L) are to the left of the right-facing llamas (R). Write a function
+
+solved : llama list -> bool
+
+which returns true if and only if the llama situation is solved.
+
+Examples:
+
+# solved [R; R; O; L; L];;
+- : bool = false
+# solved [L; L; O; R; O; R];;
+- : bool = true
+# solved [L; R; L; O; L; R];;
+- : bool = false
